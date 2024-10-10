@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Sistema Académico ESAM - Menú Principal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es una implementación de un sistema de menú simple para el sistema académico de ESAM. Utiliza **React** para crear componentes reutilizables y dinámicos que representan los diferentes botones del menú, cada uno con su propia imagen y título. Los estilos y la estructura se basan en el diseño proporcionado en el archivo estático original (`index.html` y CSS) los cuales fueron integrados en este nuevo proyecto de React.
 
-## Available Scripts
+## Estructura del Proyecto
+La aplicación consta de los siguientes componentes y carpetas principales:
 
-In the project directory, you can run:
+- `src/components/menu-button.component.jsx`: Componente reutilizable para crear botones del menú con imágenes y títulos dinámicos.
+- `src/styles/`: Carpeta que contiene los estilos originales (`app.1af6b734.css` y `chunk-vendors.2e51402a.css`).
+- `src/images/`: Carpeta con las imágenes utilizadas en los botones del menú.
+- `src/App.js`: Archivo principal que organiza los componentes y renderiza la interfaz del sistema de menú.
+- `src/images.js`: Archivo que centraliza las importaciones de todas las imágenes, facilitando su uso y gestión.
 
-### `npm start`
+## Instrucciones de Instalación
+Para ejecutar este proyecto localmente, sigue los siguientes pasos:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Clonar el repositorio**:
+   ```bash
+   git clone https://github.com/belenfrancoc/coding-challenge-esam.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Navega al directorio del proyecto**
+   cd prueba-tecnica-esam
+   
+4. **Instalar las dependencias necesarias**:
+   se debe tener instalado npm en caso de que no corre el siguiente comando en la terminal
+   npm install
 
-### `npm test`
+   
+6. **Ejecutar la aplicacion**:
+   Para ejecutar la aplicación localmente, usa el siguiente comando:
+   npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   la aplicacion deberia ejecuarse en **localhost:3000**
 
-### `npm run build`
+## Descripcion del componente menu-button.component.jsx
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+El componente MenuButton es un componente reutilizable que representa un botón con una imagen y un título dinámico. Este componente acepta las siguientes props:
+titulo: El texto que se mostrará en el botón.
+imagen: La ruta de la imagen que se mostrará dentro del botón.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Implementacion del componente
+El componente MenuButton se usa dentro de App.js y es renderizado en grupos dentro de un contenedor v-row para organizar los botones en filas. Cada botón se pasa con un título e imagen específicos.
